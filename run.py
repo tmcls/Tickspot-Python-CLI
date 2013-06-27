@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import urllib2, sys, datetime, getpass
 from xml.dom.minidom import parseString
 from calendar import monthrange
