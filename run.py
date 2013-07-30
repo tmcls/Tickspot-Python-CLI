@@ -74,10 +74,10 @@ current_year = int(datetime.datetime.now().strftime("%Y"))
 current_daysinmonth = monthrange(current_year, current_month)[1]
 
 date_from = raw_input("\n%sDate from:\n(Default: %s/%s/%s)%s\n" % (QUESTION, "01", current_month, current_year, ENDC))
-date_from = datetime.datetime(current_year, current_month, 1) if not date_from  else datetime.datetime.strptime(date_from, '%d/%m/%Y').date()
+date_from = datetime.date(current_year, current_month, 1) if not date_from  else datetime.datetime.strptime(date_from, '%d/%m/%Y').date()
 
 date_till = raw_input("\n%sDate till:\n(Default: %s/%s/%s)%s\n" % (QUESTION, current_daysinmonth, current_month, current_year, ENDC))
-date_till = datetime.datetime(current_year, current_month, current_daysinmonth) if not date_till else datetime.datetime.strptime(date_till, '%d/%m/%Y').date()
+date_till = datetime.date(current_year, current_month, current_daysinmonth) if not date_till else datetime.datetime.strptime(date_till, '%d/%m/%Y').date()
 
 
 
